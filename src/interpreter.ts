@@ -2,20 +2,18 @@ import jsonData from "./../source.rinha.json";
 
 let varMap = new Map<string, any>();
 
-//TODO usar Jest para testes unitários
-
 // console.log(jsonData);
+
+console.log(interpreter(jsonData.expression));
 console.log("---------------------");
 
-interpreter(jsonData.expression);
-
-function interpreter(node: any) : any{
+export function interpreter(node: any): any {
   switch (node.kind) {
     case "Print":
       console.log("Print");
       const print = interpreter(node.value);
       console.log(print);
-      break;
+      return print;
     case "Int":
       console.log("Int");
       return node.value;
@@ -31,11 +29,10 @@ function interpreter(node: any) : any{
       console.log("Let");
       const varValue = interpreter(node.value);
       varMap.set(node.name.text, varValue);
-      interpreter(node.next);
-      break;
+      return interpreter(node.next);
     case "Binary":
       console.log("Binary");
-      return operate(node.op , interpreter(node.lhs), interpreter(node.rhs));
+      return operate(node.op, interpreter(node.lhs), interpreter(node.rhs));
     case "If":
       console.log("If");
       if (interpreter(node.condition)) {

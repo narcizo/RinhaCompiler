@@ -1,0 +1,152 @@
+{
+  "print": {
+    "helloWorld": {
+      "name": "source.rinha",
+      "expression": {
+        "kind": "Print",
+        "value": {
+          "kind": "Str",
+          "value": "olá mundo",
+          "location": { "start": 6, "end": 18, "filename": "source.rinha" }
+        },
+        "location": { "start": 0, "end": 19, "filename": "source.rinha" }
+      },
+      "location": { "start": 0, "end": 19, "filename": "source.rinha" }
+    },
+    "stringNumber": {
+      "name": "source.rinha",
+      "expression": {
+        "kind": "Print",
+        "value": {
+          "kind": "Binary",
+          "lhs": {
+            "kind": "Str",
+            "value": "olá mundo ",
+            "location": { "start": 6, "end": 19, "filename": "source.rinha" }
+          },
+          "op": "Add",
+          "rhs": {
+            "kind": "Int",
+            "value": 123,
+            "location": { "start": 22, "end": 25, "filename": "source.rinha" }
+          },
+          "location": { "start": 6, "end": 25, "filename": "source.rinha" }
+        },
+        "location": { "start": 0, "end": 26, "filename": "source.rinha" }
+      },
+      "location": { "start": 0, "end": 26, "filename": "source.rinha" }
+    },
+    "stringNumberString": {
+      "name": "source.rinha",
+      "expression": {
+        "kind": "Print",
+        "value": {
+          "kind": "Binary",
+          "lhs": {
+            "kind": "Str",
+            "value": "olá mundo ",
+            "location": { "start": 6, "end": 19, "filename": "source.rinha" }
+          },
+          "op": "Add",
+          "rhs": {
+            "kind": "Binary",
+            "lhs": {
+              "kind": "Int",
+              "value": 123,
+              "location": { "start": 22, "end": 25, "filename": "source.rinha" }
+            },
+            "op": "Add",
+            "rhs": {
+              "kind": "Str",
+              "value": " abc",
+              "location": { "start": 28, "end": 34, "filename": "source.rinha" }
+            },
+            "location": { "start": 22, "end": 34, "filename": "source.rinha" }
+          },
+          "location": { "start": 6, "end": 34, "filename": "source.rinha" }
+        },
+        "location": { "start": 0, "end": 35, "filename": "source.rinha" }
+      },
+      "location": { "start": 0, "end": 35, "filename": "source.rinha" }
+    },
+    "stringNumberBoolean": {
+      "name": "source.rinha",
+      "expression": {
+        "kind": "Print",
+        "value": {
+          "kind": "Binary",
+          "lhs": {
+            "kind": "Str",
+            "value": "olá mundo ",
+            "location": { "start": 6, "end": 19, "filename": "source.rinha" }
+          },
+          "op": "Add",
+          "rhs": {
+            "kind": "Binary",
+            "lhs": {
+              "kind": "Bool",
+              "value": false,
+              "location": { "start": 22, "end": 27, "filename": "source.rinha" }
+            },
+            "op": "Add",
+            "rhs": {
+              "kind": "Binary",
+              "lhs": {
+                "kind": "Int",
+                "value": 123,
+                "location": {
+                  "start": 30,
+                  "end": 33,
+                  "filename": "source.rinha"
+                }
+              },
+              "op": "Add",
+              "rhs": {
+                "kind": "Bool",
+                "value": true,
+                "location": {
+                  "start": 36,
+                  "end": 40,
+                  "filename": "source.rinha"
+                }
+              },
+              "location": { "start": 30, "end": 40, "filename": "source.rinha" }
+            },
+            "location": { "start": 22, "end": 40, "filename": "source.rinha" }
+          },
+          "location": { "start": 6, "end": 40, "filename": "source.rinha" }
+        },
+        "location": { "start": 0, "end": 41, "filename": "source.rinha" }
+      },
+      "location": { "start": 0, "end": 41, "filename": "source.rinha" }
+    }
+  },
+  "let": {
+    "simpleLet": {
+      "name": "source.rinha",
+      "expression": {
+        "kind": "Let",
+        "name": {
+          "text": "a",
+          "location": { "start": 4, "end": 5, "filename": "source.rinha" }
+        },
+        "value": {
+          "kind": "Int",
+          "value": 2,
+          "location": { "start": 8, "end": 9, "filename": "source.rinha" }
+        },
+        "next": {
+          "kind": "Print",
+          "value": {
+            "kind": "Var",
+            "text": "a",
+            "location": { "start": 17, "end": 18, "filename": "source.rinha" }
+          },
+          "location": { "start": 11, "end": 19, "filename": "source.rinha" }
+        },
+        "location": { "start": 0, "end": 19, "filename": "source.rinha" }
+      },
+      "location": { "start": 0, "end": 19, "filename": "source.rinha" }
+    }
+  }
+}
